@@ -3,10 +3,9 @@ set -e
 if [ -d /bundle ]; then
   cd /bundle
   tar xzf *.tar.gz
+  rm *.tar.gz
   cd /bundle/bundle/programs/server/
   npm i
-  #rm -rf npm/node_modules/meteor/npm-bcrypt/node_modules/*
-  #npm i bcrypt
   cd /bundle/bundle/
 elif [[ $BUNDLE_URL ]]; then
   cd /tmp
